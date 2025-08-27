@@ -7,6 +7,7 @@ import CoverStories from "./pages/CoverStories";
 import CrimeSeries from "./pages/CrimeSeries";
 import Offers from "./pages/Offers";
 import MyOtt from "./pages/MyOtt";
+import "./styles/Global.css";
 
 function App() {
   return (

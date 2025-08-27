@@ -23,8 +23,10 @@ function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [recentSearches, setRecentSearches] = useState([]);
   const [showSearchBar, setShowSearchBar] = useState(false);
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
   const searchRef = useRef(null);
   const moreDropdownRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
   // Search suggestions with images
   const searchSuggestions = [
@@ -120,6 +122,10 @@ function Navbar() {
       if (moreDropdownRef.current && !moreDropdownRef.current.contains(event.target)) {
         setShowMoreDropdown(false);
       }
+      // Close hamburger menu when clicking anywhere outside of it
+      if (hamburgerRef.current && !hamburgerRef.current.contains(event.target)) {
+        setShowHamburgerMenu(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -136,6 +142,7 @@ function Navbar() {
         setShowSearchBar(false);
         setSearchQuery("");
         setShowMoreDropdown(false);
+        setShowHamburgerMenu(false);
       }
     };
 
@@ -190,7 +197,77 @@ function Navbar() {
       </div>
 
                       {/* Search Icon / Search Bar */}
-        {showSearchBar ? (
+        {/* Desktop Search - Icon that expands to search bar */}
+        <div className="desktop-search">
+          {showSearchBar ? (
+            <div className="search-container" ref={searchRef}>
+              <div className="search-bar-inline">
+                <span className="search-icon-inline">🔍</span>
+                <input
+                  type="text"
+                  className="search-input-inline"
+                  placeholder="Search Title, Movie or Cast"
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setShowSearch(e.target.value.length > 0);
+                  }}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      handleSearch(searchQuery);
+                    }
+                  }}
+                  onFocus={() => setShowSearch(true)}
+                  autoFocus
+                />
+              </div>
+              
+              {showSearch && (
+                <div className="search-dropdown">
+                  {recentSearches.length > 0 && (
+                    <div className="recent-searches">
+                      <div className="recent-title">Recent Searches</div>
+                      {recentSearches.map((search, index) => (
+                        <div
+                          key={index}
+                          className="recent-item"
+                          onClick={() => handleSearch(search.title)}
+                        >
+                          <img src={search.image} alt="" className="recent-image" />
+                          <span className="recent-text">{search.title}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  <div className="trending-searches">
+                    <div className="trending-title">Trending Searches</div>
+                    {searchSuggestions.map((suggestion, index) => (
+                      <div
+                        key={index}
+                        className="trending-item"
+                        onClick={() => handleSearch(suggestion.title)}
+                      >
+                        <img src={suggestion.image} alt="" className="trending-image" />
+                        <span className="trending-text">{suggestion.title}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <span 
+              className="search-icon"
+              onClick={() => setShowSearchBar(true)}
+            >
+              🔍
+            </span>
+          )}
+        </div>
+
+        {/* Mobile Search - Always visible search bar */}
+        <div className="mobile-search">
           <div className="search-container" ref={searchRef}>
             <div className="search-bar-inline">
               <span className="search-icon-inline">🔍</span>
@@ -209,7 +286,6 @@ function Navbar() {
                   }
                 }}
                 onFocus={() => setShowSearch(true)}
-                autoFocus
               />
             </div>
             
@@ -247,17 +323,10 @@ function Navbar() {
               </div>
             )}
           </div>
-        ) : (
-          <span 
-            className="search-icon"
-            onClick={() => setShowSearchBar(true)}
-          >
-            🔍
-          </span>
-        )}
+        </div>
 
-      {/* Right side */}
-        <div className="nav-right">
+      {/* Right side - Desktop */}
+        <div className="nav-right desktop-only">
 
           {/* Language dropdown */}
           <select className="language-select">
@@ -316,6 +385,104 @@ function Navbar() {
               Sign In
             </button>
           )}
+      </div>
+
+      {/* Hamburger Menu - Mobile Only */}
+      <div className="hamburger-menu mobile-only" ref={hamburgerRef}>
+        <button 
+          className="hamburger-btn"
+          onClick={() => setShowHamburgerMenu(!showHamburgerMenu)}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+        
+        {showHamburgerMenu && (
+          <div className="hamburger-dropdown">
+            {/* Navigation Links */}
+            <div className="hamburger-section">
+              <h3 className="hamburger-section-title">Navigation</h3>
+              <Link to="/" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Home</Link>
+              <Link to="/cover-stories" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Cover Stories</Link>
+              <Link to="/crime-series" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Crime Series</Link>
+              <Link to="/food-series" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Food Series</Link>
+              <Link to="/janata-nyayalaya" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Janata Nyayalaya</Link>
+              <Link to="/podcast-series" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Podcast Series</Link>
+              <Link to="/legal-aid" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Legal Aid</Link>
+              <Link to="/social-cause" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Social Cause</Link>
+              <Link to="/citizen-journalist" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Citizen Journalist</Link>
+              <Link to="/real-heroes" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Real Heroes</Link>
+              <Link to="/citizen-vlog" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Citizen Vlog</Link>
+              <Link to="/natural-food" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Natural Food</Link>
+              <Link to="/village-medicines" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Village Medicines</Link>
+              <Link to="/ott-awards" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>OTT Awards</Link>
+              <Link to="/gate-crash" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Gate Crash</Link>
+              <Link to="/offers" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Offers</Link>
+              <Link to="/myott" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>MyOtt</Link>
+            </div>
+
+            {/* Language Selection */}
+            <div className="hamburger-section">
+              <h3 className="hamburger-section-title">Language</h3>
+              <select className="hamburger-language-select">
+                <option>Telugu</option>
+                <option>Hindi</option>
+                <option>Tamil</option>
+                <option>Kannada</option>
+                <option>Malayalam</option>
+                <option>Bengali</option>
+                <option>Gujarati</option>
+                <option>Marathi</option>
+                <option>Punjabi</option>
+                <option>Odia</option>
+                <option>Assamese</option>
+                <option>English</option>
+                <option>Urdu</option>
+                <option>Bhojpuri</option>
+                <option>Rajasthani</option>
+              </select>
+            </div>
+
+            {/* Subscribe Button */}
+            <div className="hamburger-section">
+              <button className="hamburger-subscribe-btn">Subscribe Now</button>
+            </div>
+
+            {/* Login/Profile */}
+            <div className="hamburger-section">
+              {isLoggedIn ? (
+                <div className="hamburger-profile">
+                  <div className="hamburger-profile-info">
+                    <div className="hamburger-profile-icon">
+                      {user?.name?.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                      <div className="hamburger-profile-name">{user?.name}</div>
+                      <div className="hamburger-profile-email">{user?.email}</div>
+                    </div>
+                  </div>
+                  <div className="hamburger-profile-links">
+                    <div className="hamburger-link">My Account</div>
+                    <div className="hamburger-link">Watchlist</div>
+                    <div className="hamburger-link">Settings</div>
+                    <div className="hamburger-link hamburger-logout" onClick={handleLogout}>Logout</div>
+                  </div>
+                </div>
+              ) : (
+                <button 
+                  className="hamburger-login-btn"
+                  onClick={() => {
+                    setShowLogin(true);
+                    setShowHamburgerMenu(false);
+                  }}
+                >
+                  Sign In
+                </button>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
 
