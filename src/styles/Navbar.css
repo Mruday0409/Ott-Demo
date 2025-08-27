@@ -18,7 +18,7 @@
   transition: all 0.3s ease;
 }
 
-.logo {
+/* .logo {
   color: #60a5fa;
   font-weight: 800;
   font-size: 28px;
@@ -27,10 +27,23 @@
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-}
+  display: flex;
+  align-items: center;
+} */
 
 .logo:hover {
   color: #ff8833;
+  transform: scale(1.05);
+}
+
+.logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo:hover .logo-img {
   transform: scale(1.05);
 }
 
@@ -69,6 +82,83 @@
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* More Dropdown Styles */
+.more-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.more-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+
+.more-btn:hover {
+  color: #60a5fa;
+}
+
+.more-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.more-btn:hover::after {
+  width: 100%;
+}
+
+.more-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 8px 0;
+  margin-top: 8px;
+}
+
+.dropdown-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-link:last-child {
+  border-bottom: none;
+}
+
+.dropdown-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #60a5fa;
+  transform: translateX(4px);
 }
 
 .nav-right {
@@ -166,6 +256,8 @@
   font-size: 14px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .login-btn:hover {
@@ -486,4 +578,48 @@
 .logout-btn:hover {
   background-color: #ff4444;
   color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .search-container {
+    flex: 1;
+    margin: 0 1rem;
+  }
+  
+  .search-input-inline {
+    font-size: 14px;
+  }
+  
+  .modal {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  
+  .modal-content {
+    padding: 1.5rem;
+  }
+  
+  .profile-dropdown {
+    right: 0;
+    left: auto;
+  }
+  
+  .more-dropdown-content {
+    min-width: 180px;
+    left: -50px;
+  }
+  
+  .dropdown-link {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
 }

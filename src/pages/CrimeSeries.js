@@ -17,225 +17,225 @@ import devaraVideo from "../assets/Hero-videos/devara.mp4";
 import paramSundariVideo from "../assets/Hero-videos/param sundari.mp4";
 import war2Video from "../assets/Hero-videos/war 2.mp4";
 
-function CoverStories() {
-  // Featured Cover Stories for Hero Section
-  const featuredStories = [
+function CrimeSeries() {
+  // Featured Crime Series for Hero Section
+  const featuredCrimeSeries = [
     {
       id: 1,
-      title: "Behind the Scenes: Blockbuster Making",
+      title: "Crime Investigation Unit",
       year: "2024",
-      duration: "45m",
-      genre: "Documentary • Behind the Scenes",
-      desc: "Exclusive behind-the-scenes content showing how blockbuster movies are made, featuring interviews with directors, actors, and crew members.",
+      duration: "8 Episodes",
+      genre: "Crime • Thriller • Investigation",
+      desc: "Follow a dedicated team of investigators as they solve complex criminal cases using cutting-edge forensic science and traditional detective work.",
       image: akandaImage,
       video: akandaVideo,
       thumbnail: akandaImage
     },
     {
       id: 2,
-      title: "Director's Vision: Creative Process",
+      title: "Detective Chronicles",
       year: "2024",
-      duration: "50m",
-      genre: "Documentary • Creative",
-      desc: "An intimate look at the creative process of renowned directors, exploring their vision, challenges, and artistic choices.",
+      duration: "10 Episodes",
+      genre: "Crime • Mystery • Drama",
+      desc: "A seasoned detective's journey through the most challenging cases, revealing the psychological aspects of crime and justice.",
       image: chhavaImage,
       video: chhavaVideo,
       thumbnail: chhavaImage
     },
     {
       id: 3,
-      title: "Actor's Journey: From Script to Screen",
+      title: "Forensic Files",
       year: "2024",
-      duration: "40m",
-      genre: "Documentary • Acting",
-      desc: "Follow the journey of actors as they transform from script reading to final performance, showcasing their dedication and craft.",
+      duration: "12 Episodes",
+      genre: "Crime • Science • Documentary",
+      desc: "Real forensic investigations that showcase how science helps solve crimes and bring justice to victims and their families.",
       image: devaraImage,
       video: devaraVideo,
       thumbnail: devaraImage
     }
   ];
 
-  // Behind the Scenes
-  const behindTheScenes = [
+  // Crime Investigation
+  const crimeInvestigation = [
     {
       id: 1,
-      title: "Making of Blockbusters",
+      title: "Crime Investigation Unit",
       year: "2024",
-      duration: "50m",
-      genre: "Documentary • Production",
-      desc: "How movies are made from concept to completion",
+      duration: "8 Episodes",
+      genre: "Crime • Thriller",
+      desc: "Real crime investigations",
       image: akandaImage,
       thumbnail: akandaImage
     },
     {
       id: 2,
-      title: "Director's Cut",
+      title: "Detective Stories",
       year: "2024",
-      duration: "40m",
-      genre: "Documentary • Creative",
-      desc: "Director's perspective on filmmaking",
+      duration: "10 Episodes",
+      genre: "Crime • Mystery",
+      desc: "Detective case files",
       image: chhavaImage,
       thumbnail: chhavaImage
     },
     {
       id: 3,
-      title: "Actor's Journey",
+      title: "Forensic Files",
       year: "2024",
-      duration: "35m",
-      genre: "Documentary • Acting",
-      desc: "Actor's life story and career",
+      duration: "12 Episodes",
+      genre: "Crime • Science",
+      desc: "Forensic investigations",
       image: devaraImage,
       thumbnail: devaraImage
     },
     {
       id: 4,
-      title: "Production Secrets",
+      title: "Courtroom Drama",
       year: "2024",
-      duration: "42m",
-      genre: "Documentary • Production",
-      desc: "Production insights and techniques",
+      duration: "6 Episodes",
+      genre: "Crime • Legal",
+      desc: "Legal proceedings",
       image: paramSundariImage,
       thumbnail: paramSundariImage
     },
     {
       id: 5,
-      title: "Cinematography Masterclass",
+      title: "Undercover Operations",
       year: "2024",
-      duration: "38m",
-      genre: "Documentary • Technical",
-      desc: "Advanced cinematography techniques",
+      duration: "8 Episodes",
+      genre: "Crime • Action",
+      desc: "Undercover missions",
       image: war2Image,
       thumbnail: war2Image
     }
   ];
 
-  // Exclusive Interviews
-  const exclusiveInterviews = [
+  // True Crime
+  const trueCrime = [
     {
       id: 1,
-      title: "Celebrity Interviews",
+      title: "Unsolved Mysteries",
       year: "2024",
-      duration: "30m",
-      genre: "Interview • Celebrity",
-      desc: "Exclusive celebrity interviews",
+      duration: "15 Episodes",
+      genre: "True Crime • Mystery",
+      desc: "Investigating unsolved criminal cases",
       image: akandaImage,
       thumbnail: akandaImage
     },
     {
       id: 2,
-      title: "Director's Talk",
+      title: "Cold Case Files",
       year: "2024",
-      duration: "45m",
-      genre: "Interview • Director",
-      desc: "In-depth director conversations",
+      duration: "12 Episodes",
+      genre: "True Crime • Investigation",
+      desc: "Reopening cold cases",
       image: chhavaImage,
       thumbnail: chhavaImage
     },
     {
       id: 3,
-      title: "Producer's Insight",
+      title: "Serial Killers",
       year: "2024",
-      duration: "35m",
-      genre: "Interview • Producer",
-      desc: "Producer's business perspective",
+      duration: "10 Episodes",
+      genre: "True Crime • Psychology",
+      desc: "Psychological analysis of serial killers",
       image: devaraImage,
       thumbnail: devaraImage
     },
     {
       id: 4,
-      title: "Actor's Life",
+      title: "Crime Scene Investigation",
       year: "2024",
-      duration: "40m",
-      genre: "Interview • Actor",
-      desc: "Personal life of actors",
+      duration: "14 Episodes",
+      genre: "True Crime • Forensic",
+      desc: "Real crime scene analysis",
       image: paramSundariImage,
       thumbnail: paramSundariImage
     }
   ];
 
-  // Industry Insights
-  const industryInsights = [
+  // Legal Drama
+  const legalDrama = [
     {
       id: 1,
-      title: "Film Industry Trends",
+      title: "Courtroom Battles",
       year: "2024",
-      duration: "25m",
-      genre: "Documentary • Industry",
-      desc: "Current trends in film industry",
+      duration: "8 Episodes",
+      genre: "Legal • Drama",
+      desc: "High-stakes courtroom drama",
       image: akandaImage,
       thumbnail: akandaImage
     },
     {
       id: 2,
-      title: "Technology in Cinema",
+      title: "Defense Attorneys",
       year: "2024",
-      duration: "30m",
-      genre: "Documentary • Technology",
-      desc: "How technology shapes cinema",
+      duration: "10 Episodes",
+      genre: "Legal • Defense",
+      desc: "Criminal defense stories",
       image: chhavaImage,
       thumbnail: chhavaImage
     },
     {
       id: 3,
-      title: "Box Office Analysis",
+      title: "Prosecution Files",
       year: "2024",
-      duration: "20m",
-      genre: "Documentary • Business",
-      desc: "Box office performance analysis",
+      duration: "9 Episodes",
+      genre: "Legal • Prosecution",
+      desc: "Prosecution case studies",
       image: devaraImage,
       thumbnail: devaraImage
     },
     {
       id: 4,
-      title: "Future of Entertainment",
+      title: "Jury Deliberations",
       year: "2024",
-      duration: "35m",
-      genre: "Documentary • Future",
-      desc: "What's next in entertainment",
+      duration: "7 Episodes",
+      genre: "Legal • Jury",
+      desc: "Behind jury decisions",
       image: paramSundariImage,
       thumbnail: paramSundariImage
     }
   ];
 
-  // Red Carpet Events
-  const redCarpetEvents = [
+  // Police Procedural
+  const policeProcedural = [
     {
       id: 1,
-      title: "Award Shows",
+      title: "Police Academy",
       year: "2024",
-      duration: "60m",
-      genre: "Event • Awards",
-      desc: "Exclusive award show coverage",
+      duration: "12 Episodes",
+      genre: "Police • Training",
+      desc: "Police training and procedures",
       image: akandaImage,
       thumbnail: akandaImage
     },
     {
       id: 2,
-      title: "Movie Premieres",
+      title: "Patrol Officers",
       year: "2024",
-      duration: "45m",
-      genre: "Event • Premiere",
-      desc: "Movie premiere events",
+      duration: "15 Episodes",
+      genre: "Police • Patrol",
+      desc: "Daily life of patrol officers",
       image: chhavaImage,
       thumbnail: chhavaImage
     },
     {
       id: 3,
-      title: "Film Festivals",
+      title: "Special Units",
       year: "2024",
-      duration: "50m",
-      genre: "Event • Festival",
-      desc: "International film festivals",
+      duration: "10 Episodes",
+      genre: "Police • Special",
+      desc: "Special police units",
       image: devaraImage,
       thumbnail: devaraImage
     },
     {
       id: 4,
-      title: "Press Conferences",
+      title: "Internal Affairs",
       year: "2024",
-      duration: "30m",
-      genre: "Event • Press",
-      desc: "Movie press conferences",
+      duration: "8 Episodes",
+      genre: "Police • Internal",
+      desc: "Police internal investigations",
       image: paramSundariImage,
       thumbnail: paramSundariImage
     }
@@ -243,17 +243,17 @@ function CoverStories() {
 
   const [index, setIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
-  const selected = featuredStories[index];
+  const selected = featuredCrimeSeries[index];
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
   // Navigation
-  const nextStory = () => setIndex((prev) => (prev + 1) % featuredStories.length);
-  const prevStory = () => setIndex((prev) => (prev - 1 + featuredStories.length) % featuredStories.length);
+  const nextSeries = () => setIndex((prev) => (prev + 1) % featuredCrimeSeries.length);
+  const prevSeries = () => setIndex((prev) => (prev - 1 + featuredCrimeSeries.length) % featuredCrimeSeries.length);
 
   // Helpers for trio display
-  const getPrevIndex = (i) => (i - 1 + featuredStories.length) % featuredStories.length;
-  const getNextIndex = (i) => (i + 1) % featuredStories.length;
+  const getPrevIndex = (i) => (i - 1 + featuredCrimeSeries.length) % featuredCrimeSeries.length;
+  const getNextIndex = (i) => (i + 1) % featuredCrimeSeries.length;
 
   // Mute/Unmute functionality
   const toggleMute = () => {
@@ -263,7 +263,7 @@ function CoverStories() {
     }
   };
 
-  // Handle video change when hero story changes
+  // Handle video change when hero series changes
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.load();
@@ -272,7 +272,7 @@ function CoverStories() {
   }, [index, isMuted]);
 
   // Section Component
-  const Section = ({ title, stories }) => {
+  const Section = ({ title, series }) => {
     const [showAll, setShowAll] = useState(false);
     const sectionRef = useRef(null);
 
@@ -301,18 +301,18 @@ function CoverStories() {
 
         {showAll ? (
           <div className="expanded-grid">
-            {stories.map((story) => (
-              <div key={story.id} className="expanded-card">
+            {series.map((s) => (
+              <div key={s.id} className="expanded-card">
                 <div className="expanded-card-image">
-                  <img src={story.image} alt="" />
+                  <img src={s.image} alt="" />
                   <div className="badges">
-                    <span className="premium-badge">Exclusive</span>
+                    <span className="premium-badge">Crime</span>
                     <span className="quality-badge">HD</span>
                   </div>
                 </div>
-                <h3 className="card-title">{story.title}</h3>
-                <p className="card-meta">{story.year} • {story.duration}</p>
-                <p className="card-genre">{story.genre}</p>
+                <h3 className="card-title">{s.title}</h3>
+                <p className="card-meta">{s.year} • {s.duration}</p>
+                <p className="card-genre">{s.genre}</p>
               </div>
             ))}
           </div>
@@ -325,18 +325,18 @@ function CoverStories() {
               ⟨
             </button>
             <div className="movies-container" ref={sectionRef}>
-              {stories.map((story) => (
-                <div key={story.id} className="movie-card">
+              {series.map((s) => (
+                <div key={s.id} className="movie-card">
                   <div className="card-image-container">
-                    <img src={story.image} alt="" className="card-image" />
+                    <img src={s.image} alt="" className="card-image" />
                     <div className="badges">
-                      <span className="premium-badge">Exclusive</span>
+                      <span className="premium-badge">Crime</span>
                       <span className="quality-badge">HD</span>
                     </div>
                   </div>
-                  <h3 className="card-title">{story.title}</h3>
-                  <p className="card-meta">{story.year} • {story.duration}</p>
-                  <p className="card-genre">{story.genre}</p>
+                  <h3 className="card-title">{s.title}</h3>
+                  <p className="card-meta">{s.year} • {s.duration}</p>
+                  <p className="card-genre">{s.genre}</p>
                 </div>
               ))}
             </div>
@@ -412,12 +412,12 @@ function CoverStories() {
             <p className="hero-desc">{selected.desc}</p>
             {/* Inline thumbnail trio under description */}
             <div className="trio-row">
-              <button onClick={prevStory} className="strip-arrow-btn">⟨</button>
+              <button onClick={prevSeries} className="strip-arrow-btn">⟨</button>
               <div className="trio">
                 {[
-                  featuredStories[getPrevIndex(index)],
-                  featuredStories[index],
-                  featuredStories[getNextIndex(index)]
+                  featuredCrimeSeries[getPrevIndex(index)],
+                  featuredCrimeSeries[index],
+                  featuredCrimeSeries[getNextIndex(index)]
                 ].map((s, i) => {
                   const isCenter = i === 1;
                   return (
@@ -440,28 +440,28 @@ function CoverStories() {
                   );
                 })}
               </div>
-              <button onClick={nextStory} className="strip-arrow-btn">⟩</button>
+              <button onClick={nextSeries} className="strip-arrow-btn">⟩</button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* === COVER STORY SECTIONS === */}
-      <Section title="Behind the Scenes" stories={behindTheScenes} />
-      <Section title="Exclusive Interviews" stories={exclusiveInterviews} />
-      <Section title="Industry Insights" stories={industryInsights} />
-      <Section title="Red Carpet Events" stories={redCarpetEvents} />
-      <Section title="Making of Documentaries" stories={[
-        { id: 1, title: "Visual Effects Breakdown", year: "2024", duration: "35m", genre: "Documentary • VFX", desc: "How visual effects are created", image: akandaImage, thumbnail: akandaImage },
-        { id: 2, title: "Sound Design", year: "2024", duration: "30m", genre: "Documentary • Audio", desc: "Sound design process", image: chhavaImage, thumbnail: chhavaImage },
-        { id: 3, title: "Costume Design", year: "2024", duration: "25m", genre: "Documentary • Design", desc: "Costume creation process", image: devaraImage, thumbnail: devaraImage },
-        { id: 4, title: "Set Construction", year: "2024", duration: "40m", genre: "Documentary • Production", desc: "Building movie sets", image: paramSundariImage, thumbnail: paramSundariImage }
+      {/* === CRIME SERIES SECTIONS === */}
+      <Section title="Crime Investigation" series={crimeInvestigation} />
+      <Section title="True Crime" series={trueCrime} />
+      <Section title="Legal Drama" series={legalDrama} />
+      <Section title="Police Procedural" series={policeProcedural} />
+      <Section title="Crime Documentaries" series={[
+        { id: 1, title: "Criminal Psychology", year: "2024", duration: "8 Episodes", genre: "Crime • Psychology", desc: "Understanding criminal minds", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Crime Prevention", year: "2024", duration: "10 Episodes", genre: "Crime • Prevention", desc: "How to prevent crimes", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Victim Support", year: "2024", duration: "6 Episodes", genre: "Crime • Support", desc: "Supporting crime victims", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Crime Statistics", year: "2024", duration: "5 Episodes", genre: "Crime • Statistics", desc: "Crime data analysis", image: paramSundariImage, thumbnail: paramSundariImage }
       ]} />
-      <Section title="Celebrity Spotlights" stories={[
-        { id: 1, title: "Rising Stars", year: "2024", duration: "30m", genre: "Documentary • Celebrity", desc: "New talent in the industry", image: akandaImage, thumbnail: akandaImage },
-        { id: 2, title: "Veteran Actors", year: "2024", duration: "45m", genre: "Documentary • Legacy", desc: "Experienced actors' stories", image: chhavaImage, thumbnail: chhavaImage },
-        { id: 3, title: "Directors' Legacy", year: "2024", duration: "50m", genre: "Documentary • Directors", desc: "Legendary directors' work", image: devaraImage, thumbnail: devaraImage },
-        { id: 4, title: "Producer Profiles", year: "2024", duration: "35m", genre: "Documentary • Producers", desc: "Successful producers", image: paramSundariImage, thumbnail: paramSundariImage }
+      <Section title="Crime Thrillers" series={[
+        { id: 1, title: "Psychological Thrillers", year: "2024", duration: "12 Episodes", genre: "Crime • Thriller", desc: "Mind-bending crime stories", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Action Crime", year: "2024", duration: "8 Episodes", genre: "Crime • Action", desc: "High-octane crime action", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Crime Suspense", year: "2024", duration: "10 Episodes", genre: "Crime • Suspense", desc: "Suspenseful crime stories", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Crime Horror", year: "2024", duration: "7 Episodes", genre: "Crime • Horror", desc: "Horrifying crime cases", image: paramSundariImage, thumbnail: paramSundariImage }
       ]} />
 
       <Footer />
@@ -469,4 +469,4 @@ function CoverStories() {
   );
 }
 
-export default CoverStories;
+export default CrimeSeries;

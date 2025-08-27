@@ -640,14 +640,106 @@ function Home() {
       </div>
 
       {/* === OTHER SECTIONS === */}
-      <Section title="Kannada Movies" movies={kannadaMovies} />
-      <Section title="Telugu Movies" movies={teluguMovies} />
-      <Section title="Top Hits" movies={movies} />
+      <Section title="Cover Story Series" movies={[
+        { id: 1, title: "Behind the Scenes", year: "2024", duration: "45m", genre: "Documentary", desc: "Exclusive behind-the-scenes content", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Making of Blockbusters", year: "2024", duration: "50m", genre: "Documentary", desc: "How movies are made", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Director's Cut", year: "2024", duration: "40m", genre: "Documentary", desc: "Director's perspective", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Actor's Journey", year: "2024", duration: "35m", genre: "Documentary", desc: "Actor's life story", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Production Secrets", year: "2024", duration: "42m", genre: "Documentary", desc: "Production insights", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Crime Series" movies={[
+        { id: 1, title: "Crime Investigation", year: "2024", duration: "8 Episodes", genre: "Crime • Thriller", desc: "Real crime investigations", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Detective Stories", year: "2024", duration: "10 Episodes", genre: "Crime • Mystery", desc: "Detective case files", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Forensic Files", year: "2024", duration: "12 Episodes", genre: "Crime • Science", desc: "Forensic investigations", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Courtroom Drama", year: "2024", duration: "6 Episodes", genre: "Crime • Legal", desc: "Legal proceedings", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Undercover Operations", year: "2024", duration: "8 Episodes", genre: "Crime • Action", desc: "Undercover missions", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Food Series" movies={[
+        { id: 1, title: "Street Food Chronicles", year: "2024", duration: "30m", genre: "Food • Travel", desc: "Exploring street food", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Chef's Kitchen", year: "2024", duration: "45m", genre: "Food • Cooking", desc: "Professional cooking", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Traditional Recipes", year: "2024", duration: "35m", genre: "Food • Culture", desc: "Traditional cooking", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Food Adventures", year: "2024", duration: "40m", genre: "Food • Adventure", desc: "Culinary adventures", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Healthy Eating", year: "2024", duration: "25m", genre: "Food • Health", desc: "Healthy food choices", image: war2Image, thumbnail: war2Image }
+      ]} />
       <Section title="Continue Watching" movies={movies} />
-      <Section title="Award Winning Movies" movies={movies} />
+      <Section title="Janata Nyayalaya" movies={[
+        { id: 1, title: "Public Court", year: "2024", duration: "60m", genre: "Legal • Public", desc: "Public court proceedings", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Citizen Justice", year: "2024", duration: "45m", genre: "Legal • Social", desc: "Citizen-led justice", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Community Resolution", year: "2024", duration: "50m", genre: "Legal • Community", desc: "Community disputes", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Public Grievances", year: "2024", duration: "40m", genre: "Legal • Public", desc: "Public complaints", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Social Justice", year: "2024", duration: "55m", genre: "Legal • Social", desc: "Social justice issues", image: war2Image, thumbnail: war2Image }
+      ]} />
       <Section title="Recently Added" movies={movies} />
-      <Section title="K-Dramas" movies={movies} />
-      <Section title="Upcoming Movies" movies={movies} />
+      <Section title="Podcast Series" movies={[
+        { id: 1, title: "Tech Talk", year: "2024", duration: "45m", genre: "Podcast • Technology", desc: "Technology discussions", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Business Insights", year: "2024", duration: "50m", genre: "Podcast • Business", desc: "Business strategies", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Health & Wellness", year: "2024", duration: "40m", genre: "Podcast • Health", desc: "Health discussions", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Entertainment News", year: "2024", duration: "35m", genre: "Podcast • Entertainment", desc: "Entertainment updates", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Social Issues", year: "2024", duration: "55m", genre: "Podcast • Social", desc: "Social discussions", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Legal Aid" movies={[
+        { id: 1, title: "Free Legal Help", year: "2024", duration: "30m", genre: "Legal • Aid", desc: "Free legal assistance", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Know Your Rights", year: "2024", duration: "25m", genre: "Legal • Education", desc: "Legal rights education", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Legal Procedures", year: "2024", duration: "35m", genre: "Legal • Guide", desc: "Legal process guide", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Court Assistance", year: "2024", duration: "40m", genre: "Legal • Court", desc: "Court procedures", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Legal Documentation", year: "2024", duration: "30m", genre: "Legal • Documents", desc: "Document preparation", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Social Cause Documentaries" movies={[
+        { id: 1, title: "Environmental Issues", year: "2024", duration: "60m", genre: "Documentary • Environment", desc: "Environmental awareness", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Education for All", year: "2024", duration: "45m", genre: "Documentary • Education", desc: "Education initiatives", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Women Empowerment", year: "2024", duration: "50m", genre: "Documentary • Social", desc: "Women's rights", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Rural Development", year: "2024", duration: "55m", genre: "Documentary • Rural", desc: "Rural progress", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Healthcare Access", year: "2024", duration: "40m", genre: "Documentary • Health", desc: "Healthcare initiatives", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Citizen Journalist" movies={[
+        { id: 1, title: "Ground Report", year: "2024", duration: "20m", genre: "Journalism • Citizen", desc: "Citizen reporting", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Local News", year: "2024", duration: "15m", genre: "Journalism • Local", desc: "Local news coverage", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Community Stories", year: "2024", duration: "25m", genre: "Journalism • Community", desc: "Community reporting", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Public Issues", year: "2024", duration: "30m", genre: "Journalism • Public", desc: "Public issue coverage", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Social Media News", year: "2024", duration: "18m", genre: "Journalism • Digital", desc: "Digital journalism", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Real Heroes" movies={[
+        { id: 1, title: "Everyday Heroes", year: "2024", duration: "35m", genre: "Documentary • Heroes", desc: "Unsung heroes", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Social Workers", year: "2024", duration: "40m", genre: "Documentary • Social", desc: "Social work heroes", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Community Leaders", year: "2024", duration: "30m", genre: "Documentary • Community", desc: "Community leadership", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Volunteers", year: "2024", duration: "25m", genre: "Documentary • Volunteer", desc: "Volunteer stories", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Change Makers", year: "2024", duration: "45m", genre: "Documentary • Change", desc: "Social change makers", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Citizen Vlog" movies={[
+        { id: 1, title: "Public Problems", year: "2024", duration: "15m", genre: "Vlog • Public", desc: "Public issue vlogs", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Community Issues", year: "2024", duration: "20m", genre: "Vlog • Community", desc: "Community problems", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Social Awareness", year: "2024", duration: "18m", genre: "Vlog • Social", desc: "Social awareness", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Local Concerns", year: "2024", duration: "12m", genre: "Vlog • Local", desc: "Local issues", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Citizen Voice", year: "2024", duration: "22m", genre: "Vlog • Voice", desc: "Citizen opinions", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Natural Food" movies={[
+        { id: 1, title: "Village Food", year: "2024", duration: "30m", genre: "Food • Natural", desc: "Traditional village food", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Organic Farming", year: "2024", duration: "35m", genre: "Food • Organic", desc: "Organic food production", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Traditional Cooking", year: "2024", duration: "25m", genre: "Food • Traditional", desc: "Traditional recipes", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Healthy Living", year: "2024", duration: "28m", genre: "Food • Health", desc: "Healthy food choices", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Farm to Table", year: "2024", duration: "32m", genre: "Food • Farm", desc: "Farm fresh food", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Village Medicines" movies={[
+        { id: 1, title: "Traditional Medicine", year: "2024", duration: "40m", genre: "Health • Traditional", desc: "Traditional healing", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Herbal Remedies", year: "2024", duration: "35m", genre: "Health • Herbal", desc: "Herbal treatments", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Natural Healing", year: "2024", duration: "30m", genre: "Health • Natural", desc: "Natural cures", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Ayurveda", year: "2024", duration: "45m", genre: "Health • Ayurveda", desc: "Ayurvedic medicine", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Home Remedies", year: "2024", duration: "25m", genre: "Health • Home", desc: "Home treatments", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="OTT Annual Awards" movies={[
+        { id: 1, title: "Awards Ceremony", year: "2024", duration: "120m", genre: "Awards • Ceremony", desc: "Annual awards show", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Best Content", year: "2024", duration: "90m", genre: "Awards • Content", desc: "Best content awards", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Creator Awards", year: "2024", duration: "75m", genre: "Awards • Creator", desc: "Creator recognition", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Audience Choice", year: "2024", duration: "60m", genre: "Awards • Audience", desc: "Audience favorites", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Special Recognition", year: "2024", duration: "45m", genre: "Awards • Special", desc: "Special awards", image: war2Image, thumbnail: war2Image }
+      ]} />
+      <Section title="Gate Crash" movies={[
+        { id: 1, title: "Unexpected Events", year: "2024", duration: "30m", genre: "Reality • Unexpected", desc: "Unexpected moments", image: akandaImage, thumbnail: akandaImage },
+        { id: 2, title: "Surprise Visits", year: "2024", duration: "25m", genre: "Reality • Surprise", desc: "Surprise encounters", image: chhavaImage, thumbnail: chhavaImage },
+        { id: 3, title: "Unplanned Moments", year: "2024", duration: "20m", genre: "Reality • Unplanned", desc: "Spontaneous events", image: devaraImage, thumbnail: devaraImage },
+        { id: 4, title: "Behind the Scenes", year: "2024", duration: "35m", genre: "Reality • Behind", desc: "Behind the scenes", image: paramSundariImage, thumbnail: paramSundariImage },
+        { id: 5, title: "Candid Moments", year: "2024", duration: "28m", genre: "Reality • Candid", desc: "Candid captures", image: war2Image, thumbnail: war2Image }
+      ]} />
 
       {/* === FOOTER === */}
       <Footer />

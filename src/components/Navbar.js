@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 import "../styles/Navbar.css";
+import logo from "../assets/logo.png";
 
 // Import movie images for search suggestions
 import movie1 from "../assets/Hero-images/akanda.jpg";
@@ -10,6 +11,7 @@ import movie3 from "../assets/Hero-images/devara.jpg";
 import movie4 from "../assets/Hero-images/Param Sundari.jpg";
 import movie5 from "../assets/Hero-images/war 2.jpg";
 
+
 function Navbar() {
   const navigate = useNavigate();
   const { user, isLoggedIn, login, logout } = useUser();
@@ -17,10 +19,12 @@ function Navbar() {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  const [showMoreDropdown, setShowMoreDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [recentSearches, setRecentSearches] = useState([]);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const searchRef = useRef(null);
+  const moreDropdownRef = useRef(null);
 
   // Search suggestions with images
   const searchSuggestions = [
@@ -105,13 +109,16 @@ function Navbar() {
     setShowProfile(false);
   };
 
-  // Close search dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setShowSearch(false);
         setShowSearchBar(false);
         setSearchQuery("");
+      }
+      if (moreDropdownRef.current && !moreDropdownRef.current.contains(event.target)) {
+        setShowMoreDropdown(false);
       }
     };
 
@@ -121,13 +128,14 @@ function Navbar() {
     };
   }, []);
 
-  // Handle escape key to close search bar
+  // Handle escape key to close dropdowns
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === 'Escape') {
         setShowSearch(false);
         setShowSearchBar(false);
         setSearchQuery("");
+        setShowMoreDropdown(false);
       }
     };
 
@@ -142,15 +150,41 @@ function Navbar() {
       <nav className="navbar">
       {/* Logo */}
         <Link to="/" className="logo" onClick={handleLogoClick}>
-          OTT
+          <img src={logo} alt="OTT Logo" className="logo-img" />
         </Link>
 
       {/* Menu links */}
         <div className="nav-links">
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/movies" className="nav-link">Movies</Link>
-          <Link to="/shows" className="nav-link">Shows</Link>
           <Link to="/cover-stories" className="nav-link">Cover Stories</Link>
+          <Link to="/crime-series" className="nav-link">Crime Series</Link>
+          
+          {/* More Dropdown */}
+          <div className="more-dropdown" ref={moreDropdownRef}>
+            <button 
+              className="nav-link more-btn"
+              onClick={() => setShowMoreDropdown(!showMoreDropdown)}
+            >
+              More ▼
+            </button>
+            {showMoreDropdown && (
+              <div className="more-dropdown-content">
+                <Link to="/food-series" className="dropdown-link">Food Series</Link>
+                <Link to="/janata-nyayalaya" className="dropdown-link">Janata Nyayalaya</Link>
+                <Link to="/podcast-series" className="dropdown-link">Podcast Series</Link>
+                <Link to="/legal-aid" className="dropdown-link">Legal Aid</Link>
+                <Link to="/social-cause" className="dropdown-link">Social Cause</Link>
+                <Link to="/citizen-journalist" className="dropdown-link">Citizen Journalist</Link>
+                <Link to="/real-heroes" className="dropdown-link">Real Heroes</Link>
+                <Link to="/citizen-vlog" className="dropdown-link">Citizen Vlog</Link>
+                <Link to="/natural-food" className="dropdown-link">Natural Food</Link>
+                <Link to="/village-medicines" className="dropdown-link">Village Medicines</Link>
+                <Link to="/ott-awards" className="dropdown-link">OTT Awards</Link>
+                <Link to="/gate-crash" className="dropdown-link">Gate Crash</Link>
+              </div>
+            )}
+          </div>
+          
           <Link to="/offers" className="nav-link">Offers</Link>
           <Link to="/myott" className="nav-link">MyOtt</Link>
       </div>
