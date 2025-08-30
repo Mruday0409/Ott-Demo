@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 import "../styles/Navbar.css";
-import logo from "../assets/logo.png";
+// Logo removed - using text instead
 
 // Import movie images for search suggestions
 import movie1 from "../assets/Hero-images/akanda.jpg";
@@ -157,7 +157,7 @@ function Navbar() {
       <nav className="navbar">
       {/* Logo */}
         <Link to="/" className="logo" onClick={handleLogoClick}>
-          <img src={logo} alt="OTT Logo" className="logo-img" />
+          <span className="logo-text">OTT</span>
         </Link>
 
       {/* Menu links */}
